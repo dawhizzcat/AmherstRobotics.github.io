@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--
 <html>
 <body>
 <h1>Amherst Robotics</h1>
@@ -7,5 +8,55 @@
   <br>We focus on strengthening our team to recruit and support those interested in STEM fields.
 </p>
 <p>Here's out gofundme: </p>
+</body>
+</html>
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Data</title>
+</head>
+<body>
+    <h1>Live Firebase Data</h1>
+    <ul id="data-list"></ul>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        // Your Firebase Config (Replace with your values)
+        const firebaseConfig = {
+            apiKey: "AIzaSyDibmgFedQ79dREksWtsw9Rx8oUopkz8nQ",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            databaseURL: "robotics-site-sys.firebaseapp.com",
+            projectId: "robotics-site-sys",
+            storageBucket: "robotics-site-sys.firebasestorage.app",
+            messagingSenderId: "28673371111",
+            appId: "1:28673371111:web:9c46e5f040ffbddd53eb42"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Reference to the data
+        const dataRef = ref(database, 'data');
+
+        // Listen for real-time updates
+        onValue(dataRef, (snapshot) => {
+            const data = snapshot.val();
+            const list = document.getElementById("data-list");
+            list.innerHTML = ""; // Clear previous data
+            for (const key in data) {
+                const li = document.createElement("li");
+                li.textContent = `${key}: ${data[key]}`;
+                list.appendChild(li);
+            }
+        });
+    </script>
 </body>
 </html>
