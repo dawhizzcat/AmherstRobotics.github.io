@@ -35,13 +35,13 @@ header {
 
 h1 {
   font-size: 3em;
-  color: #ad10c4; /* dark gray for contrast */
+  color: #333; /* dark gray for contrast */
   margin-bottom: 10px;
 }
 
 h2 {
   font-size: 1.8em;
-  color: #333;
+  color: #ad10c4;
 }
 
 /* Paragraph styling */
