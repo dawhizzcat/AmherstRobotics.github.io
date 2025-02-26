@@ -3,11 +3,11 @@ body {
 }
 
 h1 {
-  color: navy;
+  color: red;
   text-align: center;
+  font-family: "Comic Sans MS";
 }
 
 p {
-  font-family: comic_sans;
   font-size: 20px;
 }
