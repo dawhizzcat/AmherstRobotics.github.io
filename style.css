@@ -1,13 +1,94 @@
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset some default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Overall page styling */
 body {
-  background-color: lightblue;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Center content with a max-width container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 h1 {
-  color: red;
-  text-align: center;
-  font-family: "Comic Sans MS";
+  font-size: 3em;
+  color: #1e3c72;
+  margin-bottom: 10px;
 }
 
+h2 {
+  font-size: 1.8em;
+  color: #2a5298;
+}
+
+/* Paragraph styling */
 p {
-  font-size: 20px;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section styling for the team list */
+.team {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.team h3 {
+  color: #1e3c72;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.team ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.team li {
+  font-size: 1.1em;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Remove the border for the last item in each list */
+.team li:last-child {
+  border-bottom: none;
+}
+
+/* Modern horizontal rule */
+hr {
+  border: none;
+  height: 2px;
+  background: #ddd;
+  width: 20%;
+  margin: 20px auto;
 }
